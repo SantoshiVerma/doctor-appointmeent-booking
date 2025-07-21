@@ -19,7 +19,11 @@ import userRouter from './routes/userRoute.js'
  //middleware
  app.use(express.json())
  app.use(cors())
-
+app.use(cors({
+  origin: [""],
+  methods: ["POST", "GET"],
+  credentials: true
+}));
 
  //api endpoint 
 
